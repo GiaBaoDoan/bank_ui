@@ -1,0 +1,64 @@
+.introduce {
+    background-color: $very-light-gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    &-heading {
+        font-size: 50px;
+        color: $dark-blue;
+        font-weight: 500;
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+        max-width: 400px;
+    }
+
+    &-desc {
+        color: $grayish-blue;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    &-banner {
+        position: relative;
+        background-image: url('../images/bg-intro-desktop.svg');
+        background-size: cover;
+        background-repeat: none;
+    }
+
+}
+// repsonsive
+
+
+@media screen and (max-width: 1024px) {
+    .introduce {
+        flex-direction: column-reverse;
+        &-container {
+            padding-bottom: 50px;
+        }
+        &-banner {
+           width: 100%;
+        }
+        &-heading {
+            font-size: 40px;
+            text-align: center;
+        }
+        &-desc {
+          text-align: center;
+        }
+        &-content {
+           align-items: center;
+       }
+     }
+  }
